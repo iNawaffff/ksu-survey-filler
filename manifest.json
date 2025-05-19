@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "معبّي استبيانات",
+  "version": "1.0",
+  "description": "تلقائياً يملأ أسئلة الاستبيان متعدد الاختيارات لموقع جامعة الملك سعود .",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://edugate.ksu.edu.sa/ksu/ui/student/student_evaluation/index/activitiesInstructorsIndex.faces*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
